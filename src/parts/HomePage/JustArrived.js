@@ -25,7 +25,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-1.png" alt="" className="w-full h-full object-cover object-center" />
+                        <img src="images/content/image-arrived-1.png" alt="" className="w-full h-full object-cover object-center" />
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Cangkir Mauttie</h5>
                     <span className="">IDR 89.300</span>
@@ -41,7 +41,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-2.png" alt=""className="w-full h-full object-cover object-center" />
+                        <img src="images/content/image-arrived-2.png" alt=""className="w-full h-full object-cover object-center" />
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Bankyu Minimay</h5>
                     <span className="">IDR 67.899</span>
@@ -57,7 +57,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-3.png" alt="" className="w-full h-full object-cover object-center" />
+                        <img src="images/content/image-arrived-3.png" alt="" className="w-full h-full object-cover object-center" />
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Buku Sidu Edition</h5>
                     <span className="">IDR 120.699</span>
@@ -73,7 +73,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-4.png" alt="" className="w-full h-full object-cover object-center"/>
+                        <img src="images/content/image-arrived-4.png" alt="" className="w-full h-full object-cover object-center"/>
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Watch Notes X</h5>
                     <span className="">IDR 1.973.000</span>
@@ -89,7 +89,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-5.png" alt="" className="w-full h-full object-cover object-center" />
+                        <img src="images/content/image-arrived-5.png" alt="" className="w-full h-full object-cover object-center" />
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Racking Plants</h5>
                     <span className="">IDR 599.400</span>
@@ -105,7 +105,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-3.png" alt="" className="w-full h-full object-cover object-center"/>
+                        <img src="images/content/image-arrived-3.png" alt="" className="w-full h-full object-cover object-center"/>
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Racking Plants</h5>
                     <span className="">IDR 599.400</span>
@@ -121,7 +121,7 @@ export default function JustArrived() {
                                 </svg>
                             </div>
                         </div>
-                        <img src="./images/content/image-arrived-1.png" alt="" className="w-full h-full object-cover object-center"/>
+                        <img src="images/content/image-arrived-1.png" alt="" className="w-full h-full object-cover object-center"/>
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Racking Plants</h5>
                     <span className="">IDR 599.400</span>
