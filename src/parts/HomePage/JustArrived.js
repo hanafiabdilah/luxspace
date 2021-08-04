@@ -29,7 +29,7 @@ export default function JustArrived() {
                     </div>
                     <h5 className="text-lg font-semibold mt-4">Cangkir Mauttie</h5>
                     <span className="">IDR 89.300</span>
-                    <Link to="/details" className="stretched-link"></Link>
+                    <Link to="/categories/1/products/3" className="stretched-link"></Link>
                 </div>
                 <div className="px-4 relative card group">
                     <div className="rounded-xl overflow-hidden card-shadow relative" style={{width: 287, height: 386}}>
