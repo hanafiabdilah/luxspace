@@ -9,7 +9,8 @@ export default function Header() {
                     <div className="w-56 items-center flex">
                         <img src="images/content/logo.png" alt="Luxspace | Fulfill your house with beautiful furniture"/>
                     </div>
-                    <div className="w-full"></div>
+                    <div className="w-full">
+                    </div>
                     <div className="w-auto">
                         <ul className="fixed bg-white inset-0 flex flex-col invisible items-center justify-center opacity-0 md:visible md:flex-row md:bg-transparent md:relative md:opacity-100 md:flex md:items-center" id="menu">
                             <li className="mx-3 py-6 md:py-0">
