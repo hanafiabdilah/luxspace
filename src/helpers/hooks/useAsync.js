@@ -25,32 +25,32 @@ export default function useAsync(initialState) {
 
                 return data
             }, error => {
-                safeSetState({ status: "rejected", error: JSON.parse(error.message)});
+                safeSetState({ status: "rejected", error: JSON.parse(error.message)})
             })
         },
         [safeSetState],
-    );
+    )
 
     const setData = useCallback(
         (data) => {
             safeSetState({data})
         },
         [safeSetState],
-    );
+    )
 
     const setError = useCallback(
         (error) => {
             safeSetState({error})
         },
         [safeSetState],
-    );
+    )
 
     const reset = useCallback(
         () => {
             safeSetState(initialStateRef.current)
         },
         [safeSetState],
-    );
+    )
 
     return {
         data, 
@@ -64,5 +64,5 @@ export default function useAsync(initialState) {
         isLoading: status === "idle" || status === "pending",
         isError: status === "rejected",
         isSuccess: status === "resolved",
-    };
+    }
 }

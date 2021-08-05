@@ -6,7 +6,7 @@ export default function useSafeDispatch(dispatch) {
         mounted.current = true
         return () => {
             mounted.current = false
-        };
+        }
     }, [])
 
     return useCallback(
