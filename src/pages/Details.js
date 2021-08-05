@@ -1,13 +1,11 @@
 import React from 'react'
-import Header from 'parts/Header'
-import Breadcrumb from 'components/Breadcrumb'
-// import BrowseRoom from 'parts/HomePage/BrowseRoom'
-// import JustArrived from 'parts/HomePage/JustArrived'
-import Clients from 'parts/Clients'
-import Sitemap from 'parts/Sitemap'
-import Footer from 'parts/Footer'
+import Header from 'components/Header'
+import Clients from 'parts/HomePage/Clients'
+import Sitemap from 'components/Sitemap'
+import Footer from 'components/Footer'
 import ProductDetail from 'parts/Details/ProductDetail'
 import Suggestion from 'parts/Details/Suggestion'
+import Breadcrumb from 'components/Breadcrumb'
 
 export default function HomePage() {
     return (

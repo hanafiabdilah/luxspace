@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Header from 'parts/Header'
-import Sitemap from 'parts/Sitemap'
-import Footer from 'parts/Footer'
+import Header from 'components/Header'
+import Sitemap from 'components/Sitemap'
+import Footer from 'components/Footer'
 import NotFoundMessage from 'parts/NotFound/NotFoundMessage'
 
 

@@ -1,13 +1,15 @@
 import React from 'react'
-import Header from 'parts/Header'
+import Header from 'components/Header'
 import Hero from 'parts/HomePage/Hero'
 import BrowseRoom from 'parts/HomePage/BrowseRoom'
 import JustArrived from 'parts/HomePage/JustArrived'
-import Clients from 'parts/Clients'
-import Sitemap from 'parts/Sitemap'
-import Footer from 'parts/Footer'
+import Clients from 'parts/HomePage/Clients'
+import Sitemap from 'components/Sitemap'
+import Footer from 'components/Footer'
+import useScrollAnchor from 'helpers/hooks/useScrollAnchor'
 
 export default function HomePage() {
+    useScrollAnchor();
     return (
         <>
             <Header theme="white" position="absolute"/>

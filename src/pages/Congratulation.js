@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Header from 'parts/Header'
-import Breadcrumb from 'components/Breadcrumb'
-import Sitemap from 'parts/Sitemap'
-import Footer from 'parts/Footer'
+import Header from 'components/Header'
+import Sitemap from 'components/Sitemap'
+import Footer from 'components/Footer'
 import Success from 'parts/Congratulation/Success'
+import Breadcrumb from 'components/Breadcrumb'
 
 export default function Congratulation() {
     return (
