@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 export default function ProductDetail() {
     return (

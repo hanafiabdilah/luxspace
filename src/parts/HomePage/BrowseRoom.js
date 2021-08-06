@@ -1,6 +1,7 @@
 import useAsync from 'helpers/hooks/useAsync'
 import React, {useEffect} from 'react'
 import fetch from 'helpers/fetch';
+import { Link } from 'react-router-dom'
 
 function Loading({ratio = {}}){
     const dummy = [
@@ -55,6 +56,7 @@ export default function BrowseRoom() {
         run(fetch({ url: "/api/categories/?page=1&limit=4" }));
       }, [run]);
 
+      console.log(data);
     const ratioClassNames = {
         wrapper: {
             default: {
@@ -95,6 +97,7 @@ export default function BrowseRoom() {
                                         <h5 className="text-lg font-semibold">{item.title}</h5>
                                         <span className="">{item.products} item{item.products > 1 ? "s" : ""}</span>
                                     </div>
+                                    <Link to={`/categories/${item.id}`}  className="stretched-link"></Link>
                                 </div>
                             )
                         })
