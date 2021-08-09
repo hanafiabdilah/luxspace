@@ -18,8 +18,6 @@ export default function HomePage() {
     useEffect(() => {
         run(fetch({ url: `/api/products/${id}` }));
       }, [run]);
-
-    console.log(data);
     
     return (
         <>
@@ -29,8 +27,8 @@ export default function HomePage() {
                 { url: "/categories/91231", name: "Office Room"},
                 { url: "/categories/91231/products/7888", name: "Details" }
             ]} />
-            <ProductDetail />
-            <Suggestion />
+            {isLoading ? 'Loading' : <ProductDetail data={data} />}
+            {isLoading ? 'Loading' : <Suggestion data={data?.relatedProducts || {}}/> }
             <Clients />
             <Sitemap />
             <Footer />

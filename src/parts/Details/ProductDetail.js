@@ -1,53 +1,39 @@
 import React, {useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom'
+import ReactHtmlParser from 'react-html-parser'
 
-export default function ProductDetail() {
+export default function ProductDetail({data}) {
+    const [slider, setSlider] = React.useState(() => data?.imgUrls?.[0] || "")
     return (
         <section className="container mx-auto">
             <div className="flex flex-wrap my-4 md:my-12">
                 <div className="w-full md:hidden px-4">
-                    <h2 className="text-5xl font-semibold">Chair Thatty</h2>
-                    <span className="text-xl">IDR 12.000.000</span>
+                    <h2 className="text-5xl font-semibold">{data.title}</h2>
+                    <span className="text-xl">IDR {data.price}</span>
                 </div>
                 <div className="flex-1">
                     <div className="slider">
                         <div className="thumbnail">
-                            <div className="px-2">
-                                <div className="item selected" data-img="/images/content/showcase-1.front.jpg">
-                                    <img src="/images/content/showcase-1.front.jpg" alt="front" className="object-cover w-full h-full rounded-lg"/>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="item" data-img="/images/content/showcase-1.back.jpg" >
-                                    <img src="/images/content/showcase-1.back.jpg" alt="back" className="object-cover w-full h-full rounded-lg"/>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="item" data-img="/images/content/showcase-1.rear.jpg">
-                                    <img src="/images/content/showcase-1.rear.jpg" alt="rear" className="object-cover w-full h-full rounded-lg"/>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="item" data-img="/images/content/showcase-1.side.jpg">
-                                    <img src="/images/content/showcase-1.side.jpg" alt="side" className="object-cover w-full h-full rounded-lg"/>
-                                </div>
-                            </div>
-                            <div className="px-2">
-                                <div className="item" data-img="/images/content/showcase-1.top.jpg" >
-                                    <img src="/images/content/showcase-1.top.jpg" alt="top" className="object-cover w-full h-full rounded-lg" />
-                                </div>
-                            </div>
+                            {data?.imgUrls?.map( item => {
+                                return (
+                                    <div key={item} className="px-2" onClick={() => setSlider(item)}>
+                                        <div className={["item", slider === item ? "selected" : ""].join(" ")}>
+                                            <img src={item} alt={item} className="object-cover w-full h-full rounded-lg"/>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                         <div className="preview">
                             <div className="item rounded-lg h-full overflow-hidden">
-                                <img src="/images/content/showcase-1.front.jpg" alt="front" className="object-cover w-full h-full rounded-lg"/>
+                                <img src={slider} alt={slider} className="object-cover w-full h-full rounded-lg"/>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="flex-1 px-4 md:p-6">
-                    <h2 className="text-5xl font-semibold">Chair Thatty</h2>
-                    <p className="text-xl">IDR 12.000.000</p>
+                    <h2 className="text-5xl font-semibold">{data.title}</h2>
+                    <p className="text-xl">IDR {data.price}</p>
                     <Link to="cart.html" className="transition-all duration-200 bg-pink-400 text-black focus:bg-black focus:text-pink-400 rounded-full px-8 py-3 mt-4 inline-flex" >
                         <svg className="fill-current mr-3" width="26" height="24">
                             <path d="M10.8754 18.7312C9.61762 18.7312 8.59436 19.7115 8.59436 20.9164C8.59436 22.1214 9.61762 23.1017 10.8754 23.1017C12.1331 23.1017 13.1564 22.1214 13.1564 20.9164C13.1563 19.7115 12.1331 18.7312 10.8754 18.7312ZM10.8754 21.8814C10.3199 21.8814 9.86796 21.4485 9.86796 20.9163C9.86796 20.3842 10.3199 19.9512 10.8754 19.9512C11.4308 19.9512 11.8828 20.3842 11.8828 20.9163C11.8828 21.4486 11.4308 21.8814 10.8754 21.8814Z"/>
@@ -61,12 +47,9 @@ export default function ProductDetail() {
                     <hr className="my-8" />
 
                     <h6 className="text-xl font-semibold mb-4">About the product</h6>
-                    <p className="text-xl leading-7 mb-6">
-                        Tailored to a level of perfection synonymous with that of a Savile Row suit and with understated quality in the detail, Jetty has been influenced by timeless 1950s style.
-                    </p>
-                    <p className="text-xl leading-7">
-                        Providing a subtle nod to the past, Jetty also provides a perfect solution for the way we work today. A comprehensive product family, Jetty features a variety of elegant chairs and sofas.
-                    </p>
+                    {
+                        data.description ? ReactHtmlParser(data.description) : ""
+                    }
                 </div>
             </div>
         </section>
