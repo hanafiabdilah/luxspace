@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
-import Header from 'components/Header'
+import Header from 'parts/Header'
 import Clients from 'parts/HomePage/Clients'
-import Sitemap from 'components/Sitemap'
-import Footer from 'components/Footer'
+import Sitemap from 'parts/Sitemap'
+import Footer from 'parts/Footer'
 import ProductDetail from 'parts/Details/ProductDetail'
 import Suggestion from 'parts/Details/Suggestion'
 import Breadcrumb from 'components/Breadcrumb'
@@ -17,8 +17,8 @@ function LoadingProductDetails() {
         <section className="container mx-auto">
             <div className="flex flex-wrap my-4 md:my-12">
                 <div className="w-full md:hidden px-4">
-                    <div class="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
                 </div>
                 <div className="flex-1">
                     <div className="slider">
@@ -40,15 +40,15 @@ function LoadingProductDetails() {
                     </div>
                 </div>
                 <div className="flex-1 px-4 md:p-6">
-                    <div class="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-44 h-8 mt-8 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-80 h-16 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-44 h-8 mt-8 bg-gray-300 animate-pulse rounded-full"></div>
                     <hr className="my-8" />
-                    <div class="w-36 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>                    
-                    <div class="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                    <div class="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-36 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>                    
+                    <div className="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                    <div className="w-88 h-4 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
                 </div>
             </div>
         </section>
@@ -74,8 +74,8 @@ function LoadingSuggestion(){
                                     <div className="rounded-xl overflow-hidden card-shadow w-full h-36">
                                         <div className=" bg-gray-300 animate-pulse rounded-lg h-full overflow-hidden" style={{ width: 287, height: 150 }}></div>
                                     </div>
-                                    <div class="w-56 h-8 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
-                                    <div class="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
+                                    <div className="w-56 h-8 mt-6 bg-gray-300 animate-pulse rounded-full"></div>
+                                    <div className="w-40 h-4 mt-3 bg-gray-300 animate-pulse rounded-full"></div>
                                 </div>
                             </div>
                         )
