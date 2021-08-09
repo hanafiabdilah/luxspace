@@ -10,7 +10,7 @@ export default function ProductDetail({data}) {
             <div className="flex flex-wrap my-4 md:my-12">
                 <div className="w-full md:hidden px-4">
                     <h2 className="text-5xl font-semibold">{data.title} </h2>
-                    <span className="text-xl">IDR {data.price}</span>
+                    <span className="text-xl">{data.price.currency()}</span>
                 </div>
                 <div className="flex-1">
                     <div className="slider">
@@ -34,7 +34,7 @@ export default function ProductDetail({data}) {
                 </div>
                 <div className="flex-1 px-4 md:p-6">
                     <h2 className="text-5xl font-semibold">{data.title}</h2>
-                    <p className="text-xl">IDR {data.price}</p>
+                    <p className="text-xl">{data.price.currency()}</p>
                     <button className="transition-all duration-200 bg-pink-400 text-black focus:bg-black focus:text-pink-400 rounded-full px-8 py-3 mt-4 inline-flex" onClick={ () => dispatch({type: "ADD_TO_CART", item: data})}>
                         <svg className="fill-current mr-3" width="26" height="24">
                             <path d="M10.8754 18.7312C9.61762 18.7312 8.59436 19.7115 8.59436 20.9164C8.59436 22.1214 9.61762 23.1017 10.8754 23.1017C12.1331 23.1017 13.1564 22.1214 13.1564 20.9164C13.1563 19.7115 12.1331 18.7312 10.8754 18.7312ZM10.8754 21.8814C10.3199 21.8814 9.86796 21.4485 9.86796 20.9163C9.86796 20.3842 10.3199 19.9512 10.8754 19.9512C11.4308 19.9512 11.8828 20.3842 11.8828 20.9163C11.8828 21.4486 11.4308 21.8814 10.8754 21.8814Z"/>
