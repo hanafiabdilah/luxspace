@@ -4,7 +4,7 @@ import { useGlobalContext } from 'helpers/hooks/useGlobalContext'
 
 export default function ProductDetail({data}) {
     const [slider, setSlider] = useState(() => data?.imgUrls?.[0] || "")
-    const { dispatch} = useGlobalContext()
+    const { dispatch } = useGlobalContext()
     return (
         <section className="container mx-auto">
             <div className="flex flex-wrap my-4 md:my-12">

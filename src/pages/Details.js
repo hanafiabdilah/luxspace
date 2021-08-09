@@ -92,7 +92,7 @@ export default function HomePage() {
     const {data, run, isLoading} = useAsync();
     useEffect(() => {
         run(fetch({ url: `/api/products/${id}` }));
-      }, [run]);
+      }, [run, id]);
     
     return (
         <>

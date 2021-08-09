@@ -23,6 +23,15 @@ function Reducer(state, action){
                 ...state,
                 cart: state.cart ? { ...state.cart, [action.item.id]: action.item} : {[action.item.id]: action.item}
             };
+        case "REMOVE_FROM_CART":
+            return {
+                ...state,
+                cart: Object.keys(state.cart).filter( key => +key !== +action.id).reduce((acc,key) => {
+                    const item = state.cart[key]
+                    acc[item.id] = item
+                    return acc
+                }, {})
+            }
         default:
             throw new Error(`Unhandled action type ${action.type}`);
     }
@@ -30,5 +39,6 @@ function Reducer(state, action){
 
 export default function Provider(props){
     const [state, dispatch] = useReducer(Reducer, initialState)
+    // console.log(state);
     return <Context.Provider value={[state, dispatch]} {...props}/>
 }
